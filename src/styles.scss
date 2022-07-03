@@ -1,0 +1,28 @@
+/* You can add global styles to this file, and also import other style files */
+@import '/node_modules/materialize-css/sass/components/color-variables';
+@import './styles/colors';
+$roboto-font-path: './node_modules/materialize-css/fonts/roboto/' !default;
+
+@import '/node_modules/materialize-css/sass/materialize';
+
+
+db-loader, db-home {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+:root, body, db-root {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    padding-bottom: 1.5em;
+  }
+
+main {
+    flex: 1 0 auto !important;
+  }
+
+  

@@ -1,0 +1,12 @@
+@import '/node_modules/materialize-css/sass/components/color-variables';
+@import '../../../styles/colors';
+
+.card-title {
+    background-color: $primary-color;
+    color: white;
+}
+
+.card-content p {
+    color: $primary-color;
+    font-size: 2em;
+}

@@ -1,0 +1,6 @@
+<div *ngIf="!showLoader">
+    <button class="btn" (click)="getCurrentLocation()">
+        Get current location
+    </button></div>
+
+<db-loader *ngIf="showLoader"></db-loader>

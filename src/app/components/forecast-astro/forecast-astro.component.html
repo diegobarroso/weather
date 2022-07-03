@@ -1,0 +1,53 @@
+<db-loader *ngIf="!astro; else showAstro"></db-loader>
+
+<ng-template #showAstro>
+
+    <div class="row">
+        <div class="col s6 l3 card center">
+            <p class="card-title">Sunrise</p>
+            <div class="card-image">
+                <i class="material-icons">sunny</i>
+                <i class="material-icons">arrow_upward</i>
+            </div>
+            <div class="card-content">
+                <p>{{astro.sunrise}}</p>
+            </div>
+        </div>
+        <div class="col s6 l3 card center">
+            <p class="card-title">Sunset</p>
+            <div class="card-image">
+                <i class="material-icons">sunny</i>
+                <i class="material-icons">arrow_downward</i>
+            </div>
+            <div class="card-content">
+                <p>{{astro.sunset}}</p>
+            </div>
+        </div>
+        <div class="col s6 l3 card center">
+            <p class="card-title">Moonrise</p>
+            <div class="card-image">
+                <i class="material-icons">mode_night</i>
+                <i class="material-icons">arrow_upward</i>
+            </div>
+            <div class="card-content">
+                <p>{{astro.moonrise}}</p>
+            </div>
+        </div>
+        <div class="col s6 l3 card center">
+            <p class="card-title">Moonset</p>
+            <div class="card-image">
+                <i class="material-icons">mode_night</i>
+                <i class="material-icons">arrow_downward</i>
+            </div>
+            <div class="card-content">
+                <p>{{astro.moonset}}</p>
+            </div>
+        </div>
+
+    </div>
+    
+    <div class="collection">
+        <a class="collection-item"><span class="badge">{{astro.moon_phase}}</span>Moon phase</a>
+        <a class="collection-item"><span class="badge">{{astro.moon_illumination}}%</span>Mooon ilumination</a>
+    </div>
+</ng-template>

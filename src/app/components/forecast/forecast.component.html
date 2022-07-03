@@ -1,0 +1,19 @@
+<div class="tab" *ngFor="let forecast of forecast.forecastday; let i=index">
+    <input [id]="i" type="checkbox">
+    <label [for]="i">{{getTabTitle(forecast.date, i) | titlecase}}</label>
+    <div class="content">
+
+        <db-forecast-hour   [hours]="forecast.hour" 
+                            [settings]="settings"
+                            [index]="i"
+                            [maxTemp]="forecast.day.maxtemp_c">
+        </db-forecast-hour>
+
+        <db-forecast-day    [day]="forecast.day" 
+                            [settings]="settings">
+        </db-forecast-day>
+
+        <db-forecast-astro [astro]="forecast.astro"></db-forecast-astro>
+    </div>
+  </div>
+

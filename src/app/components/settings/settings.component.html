@@ -1,0 +1,47 @@
+<div class="row">
+    <div class="col s12 settings-title">Degree scale</div>
+    <div class="col s4 right-align">Celcius</div>
+    <div class="col s4 switch center-align">
+        <label>
+            <input type="checkbox" [formControl]="inputScale" (click)="onChangeScale()">
+            <span class="lever"></span>
+        </label>
+    </div>
+    <div class="col s4 left-align">Fahrenheit</div>
+</div>
+
+<div class="row">
+    <div class="col s12 settings-title">Distance</div>
+    <div class="col s4 right-align">Kilometers</div>
+    <div class="col s4 switch center-align">
+        <label>
+            <input type="checkbox" [formControl]="inputDistance" (click)="onChangeDistance()">
+            <span class="lever"></span>
+        </label>
+    </div>
+    <div class="col s4 left-align">Miles</div>
+</div>
+
+<div class="row">
+    <div class="col s12 settings-title">Pressure</div>
+    <div class="col s4 right-align">milibars</div>
+    <div class="col s4 switch center-align">
+        <label>
+            <input type="checkbox" [formControl]="inputPressure" (click)="onChangePressure()">
+            <span class="lever"></span>
+        </label>
+    </div>
+    <div class="col s4 left-align">inches</div>
+</div>
+
+<div class="row">
+    <div class="col s12 settings-title">Precipitation</div>
+    <div class="col s4 right-align">milimeters</div>
+    <div class="col s4 switch center-align">
+        <label>
+            <input type="checkbox" [formControl]="inputPrecipitation" (click)="onChangePrecipitation()">
+            <span class="lever"></span>
+        </label>
+    </div>
+    <div class="col s4 left-align">inches</div>
+</div>

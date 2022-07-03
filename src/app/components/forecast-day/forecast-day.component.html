@@ -1,0 +1,14 @@
+<db-loader *ngIf="!day; else showDay"></db-loader>
+
+<ng-template #showDay>
+    
+    <div class="collection">
+        <a class="collection-item"><span class="badge">{{settings.scale==='C' ? day.avgtemp_c : day.avgtemp_f}} &deg;{{settings.scale}}</span>Average temperature</a>
+        <a class="collection-item"><span class="badge">{{settings.scale==='C' ? day.maxtemp_c : day.maxtemp_f}} &deg;{{settings.scale}}</span>Max temp</a>
+        <a class="collection-item"><span class="badge">{{settings.scale==='C' ? day.mintemp_c : day.mintemp_f}} &deg;{{settings.scale}}</span>Min temp</a>
+        <a class="collection-item"><span class="badge">{{settings.precipitation==='mm' ? day.totalprecip_mm : day.totalprecip_in}} {{settings.precipitation}}</span>Total precipitation</a>
+        <a class="collection-item"><span class="badge">{{settings.distance==='km' ? day.avgvis_km : day.avgvis_miles}} {{settings.distance}}</span>Average visibility</a>
+        <a class="collection-item"><span class="badge">{{day.uv}} <a href="https://www.epa.gov/enviro/uv-index-description" target="_blank"><i class="material-icons">info</i></a></span>UV index</a>
+    </div>
+
+</ng-template>

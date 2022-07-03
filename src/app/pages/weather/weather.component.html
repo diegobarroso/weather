@@ -1,0 +1,36 @@
+
+<db-loader *ngIf="!location; else showWeather"></db-loader>
+
+<ng-template #showWeather>
+
+    <!-- Modal Trigger -->
+    <div class="right-align">
+        <button data-target="modal" class="btn modal-trigger" (click)="openModal()">
+            <i class="material-icons left">settings</i>
+            Settings
+        </button>
+    </div>
+
+    
+    <db-current [current]="current"
+                [location]="location" 
+                [settings]="settings">
+    </db-current>
+    
+    <db-forecast    [forecast]="forecast" 
+                    [settings]="settings"
+                    [lastUpdated]="current.last_updated">
+    </db-forecast>
+
+    <!-- Modal Structure -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <db-settings (settingsChange)="onSettingsChange($event)">
+            </db-settings>
+        </div>
+        <div class="modal-footer">
+            <button class="modal-close waves-effect waves-green btn">Close</button>
+        </div>
+    </div>
+    
+</ng-template>

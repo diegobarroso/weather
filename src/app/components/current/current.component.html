@@ -1,0 +1,29 @@
+<section class="center">
+    <h4>{{location.name}}</h4>
+    <h5><span *ngIf="location.region">{{location.region}}</span><span *ngIf="location.country"> - {{location.country}}</span></h5>
+    <h6>{{current.last_updated | date:'mediumDate'}}</h6>
+            <img [src]="current.condition.icon" [alt]="current.condition.text">
+
+        
+    <div class="temperature">
+        {{settings.scale==='C' ? current.temp_c : current.temp_f}} &deg;{{settings.scale}}
+    </div>
+    <div> {{current.condition.text}}</div>
+    <div>Last update: {{current.last_updated | date:'H:mm'}} hs.</div>
+</section>
+
+
+
+
+
+    
+
+
+<div class="collection">
+    <a class="collection-item"><span class="badge">{{settings.scale==='C' ? current.feelslike_c : current.feelslike_f}} &deg;{{settings.scale}}</span>Feels like</a>
+    <a class="collection-item"><span class="badge">{{settings.distance==='km' ? current.wind_kph : current.wind_mph}} {{settings.distance}}/h</span>Wind</a>
+    <a class="collection-item"><span class="badge">{{current.precip_mm}} mm</span>Precipitation</a>
+    <a class="collection-item"><span class="badge">{{current.humidity}} %</span>Humidity</a>
+    <a class="collection-item"><span class="badge">{{settings.distance==='km' ? current.vis_km : current.vis_miles}} {{settings.distance}}</span>Visibility</a>
+
+</div>

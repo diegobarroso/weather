@@ -1,0 +1,18 @@
+
+<div class="form container">
+    <form>
+        <div class="form-field">
+            <input type="text" [formControl]="inputSearch" placeholder="Search..." [autofocus]>
+        </div>
+    </form>
+</div>
+
+<ul class="collection" *ngIf="cities.length > 0">
+    <li *ngFor="let city of cities" class="collection-item">
+        <a (click)="onGoToCity(city)">{{city.name}} - {{city.region}} - {{city.country}}</a>
+    </li>
+</ul>
+
+<div class="card-panel" *ngIf="searched && cities.length === 0">
+    No city matches the search
+</div>

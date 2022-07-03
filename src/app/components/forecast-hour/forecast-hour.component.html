@@ -1,0 +1,43 @@
+<div class="carousel" *ngIf="fromHour <= 23">
+    <div class="carousel-item center" *ngFor="let hour of hours">
+        
+        <h6 class>{{hour.time | date:'H:mm'}}</h6>
+        
+        <p  [ngClass]="{'red-text': hour.temp_c === maxTemp}" 
+            [ngStyle]="{'padding-top': getPadding(hour.temp_c)}">
+            <i class="material-icons">thermostat</i>
+            {{settings.scale==='C' ? hour.temp_c : hour.temp_f}} &deg;{{settings.scale}}
+        </p>
+        <p><img [src]="hour.condition.icon" [alt]="hour.condition.text"></p>
+
+        <p>
+          <small>
+            <i class="material-icons">air</i>
+            {{settings.distance==='km' ? hour.wind_kph : hour.wind_mph}} {{settings.distance}}/h
+          </small>
+        </p>
+
+        <p>
+          <small>
+            <i class="material-icons">umbrella</i>
+            {{settings.precipitation==='mm' ? hour.precip_mm : hour.precip_in}} {{settings.precipitation}}
+          </small>
+        </p>
+
+        <p>
+          <small>
+            <i class="material-icons">opacity</i>
+            {{hour.humidity}} %
+          </small>
+        </p>
+
+        <p>
+          <small>
+            <i class="material-icons">visibility</i>
+            {{settings.distance==='km' ? hour.vis_km : hour.vis_miles}} {{settings.distance}}
+          </small>
+        </p>
+
+      </div>
+   
+</div>
