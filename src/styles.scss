@@ -25,4 +25,85 @@ main {
     flex: 1 0 auto !important;
   }
 
+db-current .temperature {
+  font-size: 6em;
+  font-weight: bold;
+  color: $primary-color;
+}
+// Forecast tabs
+/* https://code-boxx.com/simple-responsive-accordion-pure-css/ */
+
+/* (A) TABS CONTAINER */
+.tab, .tab * {
+  box-sizing: border-box;
+}
+//.tab { max-width: 600px; }
+
+/* (B) HIDE CHECKBOX */
+.tab input { display: none; }
+
+/* (C) TAB LABEL */
+.tab label {
+  /* (C1) DIMENSIONS */
+  position: relative; /* required for (f2) position:absolute */
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+ 
+  /* (C2) COSMETICS */
+  font-size: 1rem;
+  color: #fff;
+  background: $primary-color;
+  cursor: pointer;
+}
+
+/* (D) TAB CONTENT - HIDDEN BY DEFAULT */
+/* css animation will not work with auto height */
+/* this is why we use max-height instead */
+.tab .content {
+  //background: #ccdef9;
+  overflow: hidden;
+  transition: max-height 0.3s;
+  max-height: 0;
+  padding-bottom: .5em;
+}
+.tab .content p { padding: 10px; }
+
+/* (E) OPEN TAB ON CHECKED */
+.tab input:checked ~ .content { max-height: 200vh; }
+
+/* (F) EXTRA - ADD ARROW INDICATOR */
+.tab label::after {
+  /* (F1) RIGHT ARROW */
+  display: block;  
+  content: "\25b6";
+ 
+  /* (F2) PLACE AT RIGHT SIDE */
+  position: absolute;
+  right: 10px; top: 10px;
+ 
+  /* (F3) ANIMATED ARROW */
+  transition: all 0.4s;
+}
+ 
+/* (F4) ROTATE ARROW ON CHECKED */
+.tab input:checked ~ label::after { transform: rotate(90deg); }
   
+
+// Forecast astro
+db-forecast-astro .card-title {
+  background-color: $primary-color;
+  color: white;
+}
+
+db-forecast-astro .card-content p {
+  color: $primary-color;
+  font-size: 2em;
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    width: 100%;
+  }
+}

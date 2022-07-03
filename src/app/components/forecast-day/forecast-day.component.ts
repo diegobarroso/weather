@@ -6,7 +6,6 @@ import { Day } from 'src/app/interfaces/weather-response';
 @Component({
   selector: 'db-forecast-day',
   templateUrl: './forecast-day.component.html',
-  styleUrls: ['./forecast-day.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ForecastDayComponent {

@@ -6,7 +6,6 @@ import { Forecast } from 'src/app/interfaces/weather-response';
 @Component({
   selector: 'db-forecast',
   templateUrl: './forecast.component.html',
-  styleUrls: ['./forecast.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ForecastComponent {

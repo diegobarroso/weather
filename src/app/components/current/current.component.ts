@@ -4,9 +4,9 @@ import { Current, Location } from '../../interfaces/weather-response';
 
 @Component({
   selector: 'db-current',
-  templateUrl: './current.component.html',
-  styleUrls: ['./current.component.scss']
+  templateUrl: './current.component.html'
 })
+
 export class CurrentComponent {
 
   @Input() current!: Current;

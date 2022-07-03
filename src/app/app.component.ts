@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   template: `
       <db-header></db-header>
 
-      <main>
+      <main class="container">
           <router-outlet></router-outlet>
       </main>
 

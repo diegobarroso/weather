@@ -3,8 +3,7 @@ import { Astro } from 'src/app/interfaces/weather-response';
 
 @Component({
   selector: 'db-forecast-astro',
-  templateUrl: './forecast-astro.component.html',
-  styleUrls: ['./forecast-astro.component.scss']
+  templateUrl: './forecast-astro.component.html'
 })
 export class ForecastAstroComponent {
 

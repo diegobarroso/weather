@@ -32,9 +32,9 @@ export class ForecastHourComponent implements AfterViewInit {
         dist: 0
     });
     
-    instances[0].set(this.fromHour);
+    instances[0].set(this.fromHour)
     
-    }, 100);    
+    }, 200);    
   }
 
 
