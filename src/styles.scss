@@ -71,7 +71,7 @@ db-current .temperature {
 .tab .content p { padding: 10px; }
 
 /* (E) OPEN TAB ON CHECKED */
-.tab input:checked ~ .content { max-height: 200vh; }
+.tab input:checked ~ .content { max-height: 250vh; }
 
 /* (F) EXTRA - ADD ARROW INDICATOR */
 .tab label::after {
