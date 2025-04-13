@@ -17,12 +17,11 @@ export class WeatherServiceService {
       method: 'GET',
       params: {q: query, days: '3'},
       headers: {
-        'X-RapidAPI-Host': 'weatherapi-com.p.rapidapi.com',
-        'X-RapidAPI-Key': environment['X-RapidAPI-Key']
+        'key': environment['API-Key']
       }
     };
-  
-    const url =  'https://weatherapi-com.p.rapidapi.com/forecast.json';
+
+    const url =  ' http://api.weatherapi.com/v1/forecast.json';
 
     return this.http.get<WeatherResponse>(url, options);
   }

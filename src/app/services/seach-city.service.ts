@@ -18,11 +18,10 @@ export class SeachCityService {
       method: 'GET',
       params: {q: query},
       headers: {
-        'X-RapidAPI-Key': environment['X-RapidAPI-Key'],
-        'X-RapidAPI-Host': 'weatherapi-com.p.rapidapi.com'
+        'key': environment['API-Key'],
       }
     };
-    const url = 'https://weatherapi-com.p.rapidapi.com/search.json';
+    const url = 'http://api.weatherapi.com/v1/search.json';
     return this.http.get<City[]>(url, options);
   }
 
