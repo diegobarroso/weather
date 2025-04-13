@@ -21,7 +21,7 @@ export class SeachCityService {
         'key': environment['API-Key'],
       }
     };
-    const url = 'http://api.weatherapi.com/v1/search.json';
+    const url = 'https://api.weatherapi.com/v1/search.json';
     return this.http.get<City[]>(url, options);
   }
 

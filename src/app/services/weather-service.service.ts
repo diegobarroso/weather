@@ -21,7 +21,7 @@ export class WeatherServiceService {
       }
     };
 
-    const url =  ' http://api.weatherapi.com/v1/forecast.json';
+    const url =  ' https://api.weatherapi.com/v1/forecast.json';
 
     return this.http.get<WeatherResponse>(url, options);
   }
